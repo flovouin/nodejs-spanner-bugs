@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start:uuid-string": "tsx --env-file=.env uuid-string.ts"
+    "start:uuid-string": "tsx --env-file=.env uuid-string.ts",
+    "start:run-stream": "tsx --env-file=.env-real run-stream.ts"
   },
   "dependencies": {
     "@google-cloud/spanner": "8.4.0"

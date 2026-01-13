@@ -2,7 +2,8 @@
   "name": "nodejs-spanner-bugs",
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start:uuid-string": "tsx --env-file=.env uuid-string.ts"
   },
   "dependencies": {
     "@google-cloud/spanner": "8.4.0"

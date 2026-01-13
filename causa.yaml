@@ -1,0 +1,25 @@
+version: 1
+
+workspace:
+  name: bugs
+
+causa:
+  modules:
+    "@causa/workspace-core": ">= 0.25.1"
+    "@causa/workspace-google": ">= 0.11.0"
+
+google:
+  region: europe-west1
+
+  spanner:
+    ddls:
+      format: bugs
+      globs:
+        - ddls/*.sql
+      regularExpression: (?<ignored>.*)
+
+  firestore:
+    securityRuleFile: .causa/firestore.rules
+
+  firebaseStorage:
+    securityRuleFile: .causa/storage.rules
